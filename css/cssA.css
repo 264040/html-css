@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f3f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #97f1ff, #ffffff);
+}
+
+.container h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin: 20px 0 35px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    border-radius: 12px 12px 0 0;
+}
+
+.tab {
+    padding: 15px;
+    cursor: pointer;
+    color: #d3d3d3;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 20px;
+    letter-spacing: 3px;
+}
+
+.tab:hover {
+    transform: translateY(-15px);
+    border-radius: 20px;
+}
+
+.tab.active {
+    transform: translateY(-15px);
+    color: #52e3f9;
+}
+
+.tab.active::before {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 5px;
+    background: #b9f6ff;
+    opacity: 0.7;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.item {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+    position: relative;
+    color: #666;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.item.clicked {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.item::after {
+    content: '🔊';
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+}
+
+
